@@ -3,6 +3,7 @@
 :root {
     --vodka-blue: #1d2485;
     --vodka-yellow: #fffb00;
+    --gray: #969696;
     --viridian: "Viridian College", sans-serif;
     --future: "MADE Future X", sans-serif;
 }
@@ -73,6 +74,8 @@ header ul a:hover::after {
 
 .main {
     flex: 1;
+    display: flex;
+    justify-content: center;
 }
 
 .hero {
@@ -83,6 +86,45 @@ header ul a:hover::after {
 
 h1 {
     font-family: var(--viridian);
+}
+
+.next-match {
+    display: flex;
+    height: max-content;
+    width: 85vw;
+    background-color: var(--gray);
+}
+
+.next-match div {
+    margin: 10px 5px;
+    width: 100%;
+    text-align: center;
+}
+
+.inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.team {
+    letter-spacing: 0.15em;
+}
+
+.separator {
+    display: flex;
+    width: 20px;
+    justify-content: center;
+}
+
+.separator svg {
+    stroke: black;
+    stroke-width: 5px;
+}
+
+@media(max-width:720px) {
+    .separator {
+        margin: 0 20%;
+    }
 }
 
 
