@@ -4,7 +4,7 @@
     --vodka-blue: #1d2485;
     --vodka-yellow: #fffb00;
     --gray: #969696;
-    --viridian: "Viridian College", sans-serif;
+    --viridian: "Viridian College", times;
     --future: "MADE Future X", sans-serif;
 }
 
@@ -42,6 +42,7 @@ a {
     justify-content: space-between;
     padding: 2em;
     align-items: center;
+    box-shadow: 0px 0 5px 5px var(--vodka-blue);
 }
 
 header ul {
@@ -83,39 +84,6 @@ header ul a {
     background-color: #101010;
 }
 
-@media (max-width:720px) {
-    .hamburguer {
-        display: block;
-    }
-    .nav-menu {
-        position: fixed;
-        left: -100%;
-        top: 5rem;
-        flex-direction: column;
-        width: 100%;
-        border-radius: 10px;
-        text-align: center;
-        transition: 0.3s;
-        background-color: #1d2485;
-    }
-    .nav-menu.active {
-        left: 0;
-        box-shadow: 0 10px 27px #1d2485ff;
-    }
-    .nav-menu li {
-        margin: 1.2rem 0;
-    }
-    .hamburguer.active .bar:nth-child(2) {
-        opacity: 0;
-    }
-    .hamburguer.active .bar:nth-child(1) {
-        transform: translateY(8px) rotate(45deg);
-    }
-    .hamburguer.active .bar:nth-child(3) {
-        transform: translateY(-8px) rotate(-45deg);
-    }
-}
-
 
 /* MAIN */
 
@@ -129,6 +97,9 @@ header ul a {
     display: inherit;
     justify-content: center;
     align-items: center;
+    height: 10vh;
+    padding: 20px 0;
+    background-image: url("/assets/media/");
 }
 
 h1 {
@@ -157,6 +128,11 @@ h1 {
     letter-spacing: 0.15em;
 }
 
+.team img {
+    padding: 10px;
+    height: 250px;
+}
+
 .separator {
     display: flex;
     width: 20px;
@@ -166,12 +142,6 @@ h1 {
 .separator svg {
     stroke: black;
     stroke-width: 5px;
-}
-
-@media(max-width:720px) {
-    .separator {
-        margin: 0 20%;
-    }
 }
 
 
@@ -204,4 +174,43 @@ footer ul li::after {
 
 footer ul li:hover::after {
     width: 100%;
+}
+
+@media (max-width:720px) {
+    .hamburguer {
+        display: block;
+    }
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 5rem;
+        flex-direction: column;
+        width: 100%;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.3s;
+        background-color: var(--vodka-blue);
+    }
+    .nav-menu.active {
+        left: 0;
+        box-shadow: 0 10px 27px var(--vodka-blue);
+    }
+    .nav-menu li {
+        margin: 1.2rem 0;
+    }
+    .hamburguer.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .hamburguer.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburguer.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .separator {
+        margin: 0 20%;
+    }
+    .team img {
+        height: 120px;
+    }
 }
